@@ -1,0 +1,3 @@
+Apps
+- Users (admin, superuser, saller, customer)
+- Avto info (km, colour, age, type, brand, price)
