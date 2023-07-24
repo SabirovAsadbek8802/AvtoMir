@@ -1,8 +1,7 @@
 from django.db import models
 from django.core.validators import MinValueValidator, MaxValueValidator
 from django.template.defaultfilters import slugify
-from accounts.models import User
-# Create your models here.
+from register.models import Accounts
 
 CAR_TYPES = (
     ('Sedan','Sedan'),
@@ -25,7 +24,7 @@ GEARBOXES = (
 )
 
 class Autos(models.Model):
-    owner = models.ForeignKey(User, on_delete=models.CASCADE)
+    owner = models.ForeignKey(Accounts, on_delete=models.CASCADE)
     brand = models.CharField(max_length=100)
     model_auto = models.CharField(max_length=50)
     transmisson = models.CharField(choices=GEARBOXES, max_length=100)
