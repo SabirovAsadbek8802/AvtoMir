@@ -6,3 +6,6 @@ class Accounts(models.Model):
     username = models.CharField(max_length=100, null=True)
     email = models.EmailField()
     password = models.IntegerField()
+
+    def __str__(self):
+        return f"{self.first_name} {self.last_name}"   
